@@ -2,81 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Savourr Design System - Modern Cooking App Landing Page */
-
 @layer base {
   :root {
-    /* Core Background & Surface Colors */
-    --background: 222 20% 6%;  /* Deep charcoal */
-    --foreground: 0 0% 98%;    /* Near white */
-    --surface: 222 15% 9%;     /* Slightly lighter charcoal */
-    --surface-hover: 222 15% 12%; /* Hover state surface */
+    --background: 40 15% 12%;
+    --foreground: 45 20% 95%;
+    --surface: 40 20% 16%;
+    --surface-hover: 40 25% 20%;
     
-    /* Neon Purple Brand Colors */
-    --neon-purple: 267 83% 67%;     /* Main neon purple */
-    --neon-purple-bright: 267 100% 75%; /* Brighter purple */
-    --neon-purple-dim: 267 50% 45%;    /* Dimmer purple */
-    --neon-pink: 320 91% 65%;          /* Complementary neon pink */
-    --neon-blue: 240 100% 70%;         /* Accent blue */
-    --neon-green: 142 71% 45%;         /* Success green */
+    --card: 40 20% 14%;
+    --card-foreground: 45 20% 95%;
+    --card-border: 45 15% 25%;
+    --card-hover: 40 25% 18%;
     
-    /* Glass Morphism Effects */
-    --glass-bg: 267 25% 15%;           /* Glass background */
-    --glass-border: 267 30% 25%;       /* Glass border */
-    --glass-highlight: 267 40% 95%;    /* Glass highlight */
+    --popover: 40 20% 14%;
+    --popover-foreground: 45 20% 95%;
     
-    /* Semantic Colors */
-    --primary: 267 83% 67%;            /* Neon purple */
-    --primary-foreground: 0 0% 98%;
-    --secondary: 222 15% 12%;          /* Dark surface */
-    --secondary-foreground: 0 0% 90%;
-    --accent: 320 91% 65%;             /* Neon pink */
-    --accent-foreground: 0 0% 98%;
-    --muted: 222 15% 15%;
-    --muted-foreground: 0 0% 65%;
+    --primary: 25 75% 62%;
+    --primary-foreground: 340 30% 15%;
     
-    /* Interactive States */
-    --hover-glow: 267 83% 67%;         /* Purple glow on hover */
-    --active-glow: 320 91% 65%;        /* Pink glow on active */
+    --secondary: 40 20% 22%;
+    --secondary-foreground: 45 20% 95%;
     
-    /* Card System */
-    --card: 222 15% 9%;                /* Card background */
-    --card-foreground: 0 0% 95%;       /* Card text */
-    --card-border: 267 20% 20%;        /* Card border */
-    --card-hover: 222 15% 12%;         /* Card hover background */
+    --muted: 40 15% 18%;
+    --muted-foreground: 45 10% 65%;
     
-    /* Form Elements */
-    --input: 222 15% 12%;              /* Input background */
-    --border: 267 20% 20%;             /* Border color */
-    --ring: 267 83% 67%;               /* Focus ring */
+    --accent: 85 40% 75%;
+    --accent-foreground: 340 30% 15%;
     
-    /* Status Colors */
-    --success: 142 71% 45%;            /* Success green */
-    --warning: 48 96% 53%;             /* Warning yellow */
-    --destructive: 0 84% 60%;          /* Error red */
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 45 20% 95%;
     
-    /* Spacing & Borders */
-    --radius: 1rem;                    /* Rounded corners */
-    --bento-gap: 1.5rem;              /* Gap between bento cards */
+    --border: 45 15% 25%;
+    --input: 45 15% 25%;
+    --ring: 25 75% 62%;
     
-    /* Animation Values */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    --hover-lift: translateY(-8px);
-    --hover-scale: scale(1.02);
+    --success: 85 40% 75%;
+    --warning: 35 85% 65%;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-pink)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--neon-purple) / 0.2), hsl(var(--neon-pink) / 0.1));
-    --gradient-card: linear-gradient(135deg, hsl(var(--glass-bg) / 0.8), hsl(var(--surface) / 0.9));
-    --gradient-text: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-pink)));
+    --radius: 16px;
+    --bento-gap: 16px;
     
-    /* Shadows & Glows */
-    --shadow-neon: 0 0 30px hsl(var(--neon-purple) / 0.3);
-    --shadow-card: 0 8px 32px hsl(222 20% 3% / 0.4);
-    --shadow-hover: 0 20px 40px hsl(var(--neon-purple) / 0.2);
-    --glow-text: 0 0 20px hsl(var(--neon-purple) / 0.5);
+    /* Warm brand colors */
+    --warm-yellow: 45 85% 80%;
+    --bright-orange: 35 85% 65%;
+    --burnt-orange: 25 75% 42%;
+    --dark-burgundy: 340 30% 15%;
+    --mint-green: 85 40% 75%;
+    
+    /* Glass morphism */
+    --glass-bg: 40 20% 18%;
+    --glass-border: 45 15% 30%;
+    --glass-highlight: 45 50% 90%;
+    
+    /* Background gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--bright-orange)) 0%, hsl(var(--burnt-orange)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--bright-orange) / 0.1) 50%, hsl(var(--background)) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--surface)) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(var(--warm-yellow)) 0%, hsl(var(--bright-orange)) 50%, hsl(var(--burnt-orange)) 100%);
+    
+    /* Shadow effects */
+    --shadow-warm: 0 4px 20px hsl(var(--bright-orange) / 0.15);
+    --shadow-card: 0 2px 12px hsl(var(--background) / 0.2);
+    --shadow-hover: 0 6px 24px hsl(var(--bright-orange) / 0.2);
+  }
+  
+  .dark {
+    /* Dark mode is default */
   }
 }
 
@@ -86,6 +77,6 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-nunito;
   }
 }

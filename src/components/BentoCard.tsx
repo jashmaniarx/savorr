@@ -26,8 +26,8 @@ const BentoCard: React.FC<BentoCardProps> = ({
 
   const variantClasses = {
     default: 'bg-gradient-card border-card-border',
-    highlight: 'bg-gradient-primary border-neon-purple shadow-neon',
-    feature: 'bg-surface border-glass-border shadow-hover'
+    highlight: 'bg-gradient-primary border-bright-orange/40 shadow-warm',
+    feature: 'bg-surface border-glass-border shadow-card'
   };
 
   return (
@@ -47,9 +47,9 @@ const BentoCard: React.FC<BentoCardProps> = ({
         // Interactive effects
         interactive && [
           'cursor-pointer group',
-          'hover:scale-[1.02] hover:-translate-y-2',
-          'hover:shadow-hover hover:border-neon-purple-dim',
-          'active:scale-[0.98]'
+          'hover:scale-[1.01] hover:-translate-y-1',
+          'hover:shadow-hover hover:border-bright-orange/30',
+          'active:scale-[0.99]'
         ],
         
         // Animation

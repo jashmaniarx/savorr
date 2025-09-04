@@ -27,13 +27,12 @@ export default {
 				surface: 'hsl(var(--surface))',
 				'surface-hover': 'hsl(var(--surface-hover))',
 				
-				// Neon brand colors
-				'neon-purple': 'hsl(var(--neon-purple))',
-				'neon-purple-bright': 'hsl(var(--neon-purple-bright))',
-				'neon-purple-dim': 'hsl(var(--neon-purple-dim))',
-				'neon-pink': 'hsl(var(--neon-pink))',
-				'neon-blue': 'hsl(var(--neon-blue))',
-				'neon-green': 'hsl(var(--neon-green))',
+				// Warm brand colors
+				'warm-yellow': 'hsl(var(--warm-yellow))',
+				'bright-orange': 'hsl(var(--bright-orange))',
+				'burnt-orange': 'hsl(var(--burnt-orange))',
+				'dark-burgundy': 'hsl(var(--dark-burgundy))',
+				'mint-green': 'hsl(var(--mint-green))',
 				
 				// Glass morphism
 				'glass-bg': 'hsl(var(--glass-bg))',
@@ -76,9 +75,14 @@ export default {
 				'gradient-text': 'var(--gradient-text)'
 			},
 			boxShadow: {
-				'neon': 'var(--shadow-neon)',
+				'warm': 'var(--shadow-warm)',
 				'card': 'var(--shadow-card)',
 				'hover': 'var(--shadow-hover)'
+			},
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
+				'quicksand': ['Quicksand', 'sans-serif'],
+				'nunito': ['Nunito', 'sans-serif'],
 			},
 			spacing: {
 				'bento': 'var(--bento-gap)'
@@ -125,12 +129,12 @@ export default {
 						transform: 'translateY(0)'
 					}
 				},
-				'glow-pulse': {
+				'warm-glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px hsl(var(--neon-purple) / 0.3)'
+						boxShadow: '0 0 15px hsl(var(--bright-orange) / 0.2)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px hsl(var(--neon-purple) / 0.6)'
+						boxShadow: '0 0 25px hsl(var(--bright-orange) / 0.3)'
 					}
 				},
 				'float': {
@@ -157,7 +161,7 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-up': 'slide-up 0.8s ease-out',
-				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'warm-glow': 'warm-glow 3s ease-in-out infinite',
 				'float': 'float 3s ease-in-out infinite',
 				'scale-in': 'scale-in 0.5s ease-out'
 			}
